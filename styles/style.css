@@ -93,6 +93,11 @@ header {
     border-top-left-radius: 25px;
 }
 
+.grid-cell {
+    flex: 1 1 1px;
+    border: 1px solid grey;
+}
+
 footer {
     width: 50%;
     background-color: var(--footer-background);
@@ -173,6 +178,14 @@ header {
     position: absolute;
     right: 0px;
     bottom: 0px;
+    display: flex;
+    flex-flow: column nowrap;
+}
+
+.grid-cell-row {
+    display: flex;
+    flex-flow: row nowrap;
+    flex: 1 1 auto;
 }
 
 footer {
