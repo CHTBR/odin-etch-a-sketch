@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<svg width="764px" height="439px" viewBox="0 0 764 439" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <path d="M764 0L764 0L764 439L0 439L0 0L764 0Z" id="path_1" />
+    <clipPath id="clip_1">
+      <use xlink:href="#path_1" clip-rule="evenodd" fill-rule="evenodd" />
+    </clipPath>
+  </defs>
+  <g id="Frame">
+    <path d="M764 0L764 0L764 439L0 439L0 0L764 0Z" id="Frame" fill="none" stroke="none" />
+    <path d="M1.51572 126.922C12.1428 49.6871 229.666 0 387.11 0C544.555 0 645.149 50.5192 681.522 87.6915C717.895 124.864 847.37 265.767 681.522 346.92C515.674 428.073 60.1349 469.849 18.1295 412.304C-23.8759 354.76 64.3005 271.921 51.7435 216.921C39.1866 161.922 -9.11133 204.157 1.51572 126.922Z" id="Rectangle" fill="#5BDCD1" fill-rule="evenodd" stroke="none" clip-path="url(#clip_1)" />
+  </g>
+</svg>
