@@ -38,17 +38,29 @@ sizeInput.addEventListener("input", () => {
 const colorGrid = document.getElementById("color-grid-container");
 let cursorColor = "black";
 
-// FOR every available color
-//  INSTANTATE constant colorOption with the value of a new button element reference
-//  ADD id equal to the current color ton colorOption
-//  APPEND colorOption as a child of colorGrid
-
+const colorList = ["white", "black", "red", "green", "blue", "orange", "yellow", "turquoise"];
+for (let a = 0; a<2; a++) {
+    const colorRow = document.createElement("div");
+    colorRow.classList.add("color-row");
+    for (let b = 0; b<4; b++) {
+        const colorCell = document.createElement("button");
+        colorCell.setAttribute("id", colorList[b+4*a]);
+        colorCell.classList.add("color-cell");
+        colorCell.classList.add(colorList[b+4*a]);
+        colorRow.appendChild(colorCell);
+    }
+    colorGrid.appendChild(colorRow);
+}
 // IF a colorOption button is pressed
 //  SET the value of cursorColor to the button id
+colorGrid.addEventListener("click", event => {
+    if (event.target.classList.item(0) === "color-cell") {
+        cursorColor = event.target.id;
+    }
+});
 
 /* GRID COLORING */
 gridContainer.addEventListener("mouseover", event => {
-    console.log("onmouseover FIRED!")
     if (event.target.classList.item(0) === "grid-cell") {
         event.target.classList.replace(event.target.classList.item(1), cursorColor);
     }

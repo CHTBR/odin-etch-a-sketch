@@ -77,6 +77,18 @@ header {
     height: 30%;
     background-color: white;
     border-radius: 15px;
+    display: flex;
+    flex-flow: column nowrap;
+}
+
+.color-row {
+    display: flex;
+    flex-flow: row nowrap;
+    flex: 1 1 auto;
+}
+
+.color-cell {
+    flex: 1 1 auto;
 }
 
 #grid-size-container {
@@ -91,6 +103,12 @@ header {
     border-left: 25px solid var(--border-color);
     border-top: 25px solid var(--border-color);
     border-top-left-radius: 25px;
+}
+
+.grid-cell-row {
+    display: flex;
+    flex-flow: row nowrap;
+    flex: 1 1 auto;
 }
 
 .grid-cell {
@@ -182,12 +200,6 @@ header {
     flex-flow: column nowrap;
 }
 
-.grid-cell-row {
-    display: flex;
-    flex-flow: row nowrap;
-    flex: 1 1 auto;
-}
-
 footer {
     position: absolute;
     bottom: 0px;
@@ -196,10 +208,32 @@ footer {
 }
 
 /* GRID CELL COLORS */
-#sketch-grid-container .black {
+.black {
     background-color: black;
 }
-
-#sketch-grid-container .white {
+.white {
     background-color: white;
+}
+
+.red {
+    background-color: red;
+}
+.green {
+    background-color: green;
+}
+
+.blue {
+    background-color: blue;
+}
+
+.orange {
+    background-color: orange;
+}
+
+.yellow {
+    background-color: yellow;
+}
+
+.turquoise {
+    background-color: turquoise;
 }
