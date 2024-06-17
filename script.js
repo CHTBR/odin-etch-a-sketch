@@ -2,10 +2,13 @@
 const gridContainer = document.querySelector("#sketch-grid-container");
 
 function createGrid(gridSize) {
-    for (let a = 1; a<gridSize; a++) {
+    while (gridContainer.firstChild) {
+        gridContainer.firstChild.remove();
+    }
+    for (let a=0; a<gridSize; a++) {
         const gridCellRow = document.createElement("div");
         gridCellRow.classList.add("grid-cell-row");
-        for (let b=1; b<gridSize; b++) {
+        for (let b=0; b<gridSize; b++) {
             const gridCell = document.createElement("div");
             gridCell.classList.add("grid-cell");
             gridCell.setAttribute("id", String(a) + String(b));
