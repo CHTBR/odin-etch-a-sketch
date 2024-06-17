@@ -17,10 +17,19 @@ function createGrid(gridSize) {
 
 createGrid(16);
 
-// INSTANTIATE constant gridSizeInputField with a reference to the input element with id "grid-size-input"
+const sizeInput = document.getElementById("grid-size-input");
+sizeInput.value = 0;
+sizeInput.addEventListener("input", () => {
+    if (+sizeInput.value > 100) {
+        sizeInput.value = 100;
+    } else {
+        sizeInput.value = Math.abs(Math.floor(sizeInput.value));
+        if (sizeInput.value > 0) {
+            createGrid(sizeInput.value);
+        }
+    }
+});
 
-// IF the value of the gridSizeInputField is changed
-//  IF the value isn't lower than 1 and is a whole number
 //   INVOKE createGrid with the argument value
 
 
