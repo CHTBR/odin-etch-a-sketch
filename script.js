@@ -11,6 +11,7 @@ function createGrid(gridSize) {
         for (let b=0; b<gridSize; b++) {
             const gridCell = document.createElement("div");
             gridCell.classList.add("grid-cell");
+            gridCell.classList.add("white");
             gridCell.setAttribute("id", String(a) + String(b));
             gridCellRow.appendChild(gridCell);
         }
@@ -33,22 +34,22 @@ sizeInput.addEventListener("input", () => {
     }
 });
 
-//   INVOKE createGrid with the argument value
-
-
-/* GRID COLORING */
-// IF mouse cursor is over a cell
-//  CHANGE the class of the cell to the name of the currently selected color
-
-
 /* CHANGING COLORS */
-// INSTANTIATE a variable cursorColor with a value of "black"
-// INSTANTIATE a constant colorGrid with a reference to the div element with id "color-grid"
+const colorGrid = document.getElementById("color-grid-container");
+let cursorColor = "black";
 
-// FOR evry available color
+// FOR every available color
 //  INSTANTATE constant colorOption with the value of a new button element reference
 //  ADD id equal to the current color ton colorOption
 //  APPEND colorOption as a child of colorGrid
 
 // IF a colorOption button is pressed
 //  SET the value of cursorColor to the button id
+
+/* GRID COLORING */
+gridContainer.addEventListener("mouseover", event => {
+    console.log("onmouseover FIRED!")
+    if (event.target.classList.item(0) === "grid-cell") {
+        event.target.classList.replace(event.target.classList.item(1), cursorColor);
+    }
+});

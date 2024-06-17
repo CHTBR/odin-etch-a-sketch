@@ -194,3 +194,12 @@ footer {
     text-align: center;
     padding: 1vh 0;
 }
+
+/* GRID CELL COLORS */
+#sketch-grid-container .black {
+    background-color: black;
+}
+
+#sketch-grid-container .white {
+    background-color: white;
+}
